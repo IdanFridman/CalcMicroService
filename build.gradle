@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.9.RELEASE")
+
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+
+jar {
+    baseName = 'calc-service'
+    version = '0.1.0'
+}
+
+project.ext {
+    springBootVersion = '1.1.9.RELEASE'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.integration:spring-integration-core:4.1.0.RELEASE'
+    compile 'org.projectreactor.spring:reactor-spring-context'
+    compile 'org.springframework.integration:spring-integration-mongodb:4.0.4.RELEASE'
+    compile 'javax.inject:javax.inject:1'
+
+    //Required dependency for JSP
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+    testCompile("junit:junit")
+}
+
+
+
+
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
