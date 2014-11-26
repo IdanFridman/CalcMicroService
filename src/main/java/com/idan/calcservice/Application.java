@@ -15,7 +15,7 @@ import org.springframework.integration.config.EnableIntegration;
 @EnableIntegration
 @Configuration
 @ComponentScan
-@ImportResource("integration-context-mongo.xml")
+@ImportResource({"integration-context-mongo.xml","integration-context-kafka.xml"})
 public class Application {
 
     public static void main(String[] args) {

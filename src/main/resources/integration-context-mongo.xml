@@ -16,6 +16,9 @@
 
     <int-mongodb:outbound-channel-adapter id="adapterWithConverter" mongo-converter="stringConverter"/>
 
+
+
+
     <!-- 	mongo-converter="stringConverter" -->
 
     <bean id="stringConverter" class="com.idan.calcservice.mongo.StringConverter">
