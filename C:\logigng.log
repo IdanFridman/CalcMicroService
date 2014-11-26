@@ -1,0 +1,17 @@
+2014-11-25 17:40:22 DEBUG logging:29 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2014-11-25 17:40:22 INFO  Version:27 - HV000001: Hibernate Validator 5.0.3.Final
+2014-11-25 17:40:22 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2014-11-25 17:40:22 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2014-11-25 17:40:22 DEBUG ConfigurationImpl:140 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2014-11-25 17:40:22 DEBUG ConfigurationImpl:154 - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy46
+2014-11-25 17:40:22 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2014-11-25 17:40:22 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
+2014-11-25 17:40:26 INFO  VerifiableProperties:68 - Verifying properties
+2014-11-25 17:40:26 INFO  VerifiableProperties:68 - Property compression.codec is overridden to 0
+2014-11-25 17:40:26 INFO  VerifiableProperties:68 - Property metadata.broker.list is overridden to 10.29.33.144:9092
+2014-11-25 17:40:26 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2014-11-25 17:40:26 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2014-11-25 17:40:26 DEBUG ConfigurationImpl:140 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2014-11-25 17:40:26 DEBUG ConfigurationImpl:154 - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy46
+2014-11-25 17:40:26 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2014-11-25 17:40:26 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.

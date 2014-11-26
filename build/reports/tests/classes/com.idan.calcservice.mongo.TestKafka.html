@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.idan.calcservice.mongo.TestKafka</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.idan.calcservice.mongo.TestKafka</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.idan.calcservice.mongo.html">com.idan.calcservice.mongo</a> &gt; TestKafka</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">19.180s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">sendMessageToKafka</td>
+<td>19.180s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>11:06:34,457 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+11:06:34,458 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+11:06:34,458 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/idan/dev/Projects/CalcMicroService/build/resources/test/logback.xml]
+11:06:34,459 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs multiple times on the classpath.
+11:06:34,459 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/idan/dev/Projects/CalcMicroService/build/resources/test/logback.xml]
+11:06:34,459 |-WARN in ch.qos.logback.classic.LoggerContext[default] - Resource [logback.xml] occurs at [file:/Users/idan/dev/Projects/CalcMicroService/build/resources/main/logback.xml]
+11:06:34,544 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+11:06:34,547 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+11:06:34,555 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [stdout]
+11:06:34,571 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+11:06:34,612 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [reactor] to INFO
+11:06:34,612 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.projectreactor] to INFO
+11:06:34,612 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.springframework] to WARN
+11:06:34,612 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.springframework.integration] to DEBUG
+11:06:34,612 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+11:06:34,612 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[ROOT]
+11:06:34,613 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+11:06:34,614 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7e8374ed - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.1.9.RELEASE)
+
+11:06:36.555 [Test worker] INFO  o.s.i.config.IntegrationRegistrar - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+11:06:36.569 [Test worker] DEBUG o.s.i.config.IntegrationRegistrar - SpEL function '#xpath' isn't registered: there is no spring-integration-xml.jar on the classpath.
+11:06:37.477 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+11:06:37.479 [Test worker] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+11:06:37.658 DEBUG [Test worker][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+11:06:37.658 INFO  [Test worker][org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 5.0.3.Final
+11:06:37.671 DEBUG [Test worker][org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+11:06:37.674 DEBUG [Test worker][org.hibernate.validator.internal.engine.ConfigurationImpl] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+11:06:37.675 DEBUG [Test worker][org.hibernate.validator.internal.engine.ConfigurationImpl] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+11:06:37.677 DEBUG [Test worker][org.hibernate.validator.internal.engine.ConfigurationImpl] Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy46
+11:06:37.688 DEBUG [Test worker][org.hibernate.validator.internal.xml.ValidationXmlParser] Trying to load META-INF/validation.xml for XML based Validator configuration.
+11:06:37.697 DEBUG [Test worker][org.hibernate.validator.internal.xml.ValidationXmlParser] No META-INF/validation.xml found. Using annotation based configuration only.
+11:06:38.488 [Test worker] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+11:06:38.489 [Test worker] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/7.0.56
+11:06:39.780 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:06:41.485 [Test worker] INFO  o.s.i.k.support.ProducerFactoryBean - Using producer properties =&gt; {metadata.broker.list=localhost:9092, compression.codec=0, producer.type=async}
+11:06:41.996 INFO  [Test worker][kafka.utils.VerifiableProperties] Verifying properties
+11:06:42.035 INFO  [Test worker][kafka.utils.VerifiableProperties] Property compression.codec is overridden to 0
+11:06:42.035 INFO  [Test worker][kafka.utils.VerifiableProperties] Property metadata.broker.list is overridden to localhost:9092
+11:06:42.035 INFO  [Test worker][kafka.utils.VerifiableProperties] Property producer.type is overridden to async
+11:06:42.446 DEBUG [Test worker][org.hibernate.validator.internal.engine.resolver.DefaultTraversableResolver] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+11:06:42.446 DEBUG [Test worker][org.hibernate.validator.internal.engine.ConfigurationImpl] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+11:06:42.447 DEBUG [Test worker][org.hibernate.validator.internal.engine.ConfigurationImpl] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+11:06:42.447 DEBUG [Test worker][org.hibernate.validator.internal.engine.ConfigurationImpl] Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy46
+11:06:42.447 DEBUG [Test worker][org.hibernate.validator.internal.xml.ValidationXmlParser] Trying to load META-INF/validation.xml for XML based Validator configuration.
+11:06:42.448 DEBUG [Test worker][org.hibernate.validator.internal.xml.ValidationXmlParser] No META-INF/validation.xml found. Using annotation based configuration only.
+11:06:43.842 [Test worker] DEBUG o.s.i.c.GlobalChannelInterceptorProcessor - No global channel interceptors.
+11:06:43.850 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {mongo:outbound-channel-adapter:mongoAdapter.adapter} as a subscriber to the 'mongoAdapter' channel
+11:06:43.851 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'application:8091.mongoAdapter' has 1 subscriber(s).
+11:06:43.851 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started mongoAdapter.adapter
+11:06:43.851 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {mongo:outbound-channel-adapter:adapterWithConverter.adapter} as a subscriber to the 'adapterWithConverter' channel
+11:06:43.851 [Test worker] INFO  o.s.i.channel.DirectChannel - Channel 'application:8091.adapterWithConverter' has 1 subscriber(s).
+11:06:43.851 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started adapterWithConverter.adapter
+11:06:43.851 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {message-handler:kafkaOutboundChannelAdapter} as a subscriber to the 'inputToKafka' channel
+11:06:43.851 [Test worker] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application:8091.inputToKafka' has 1 subscriber(s).
+11:06:43.851 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started kafkaOutboundChannelAdapter
+11:06:43.851 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+11:06:43.852 [Test worker] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application:8091.errorChannel' has 1 subscriber(s).
+11:06:43.852 [Test worker] INFO  o.s.i.endpoint.EventDrivenConsumer - started _org.springframework.integration.errorLogger
+11:06:43.894 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler [&quot;http-nio-8091&quot;]
+11:06:43.909 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [&quot;http-nio-8091&quot;]
+11:06:43.912 [Test worker] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+11:06:47.118 DEBUG [ProducerSendThread-][kafka.producer.async.ProducerSendThread] 5014 ms elapsed. Queue time reached. Sending..
+11:06:47.120 DEBUG [ProducerSendThread-][kafka.producer.async.ProducerSendThread] Handling 0 events
+11:06:52.127 DEBUG [ProducerSendThread-][kafka.producer.async.ProducerSendThread] 5007 ms elapsed. Queue time reached. Sending..
+11:06:52.128 DEBUG [ProducerSendThread-][kafka.producer.async.ProducerSendThread] Handling 0 events
+11:06:53.994 [Test worker] DEBUG o.s.i.c.PublishSubscribeChannel - preSend on channel 'inputToKafka', message: [Payload String content=Hello Kafka From SI][Headers={messageKey=3, topic=zerg.hydra, id=11bdce21-21df-40a5-346c-900df387425b, timestamp=1416992813994}]
+11:06:53.995 [Test worker] DEBUG o.s.i.k.o.KafkaProducerMessageHandler - org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler#0 received message: [Payload String content=Hello Kafka From SI][Headers={messageKey=3, topic=zerg.hydra, id=11bdce21-21df-40a5-346c-900df387425b, timestamp=1416992813994}]
+11:06:54.009 [Test worker] DEBUG o.s.i.c.PublishSubscribeChannel - postSend (sent=true) on channel 'inputToKafka', message: [Payload String content=Hello Kafka From SI][Headers={messageKey=3, topic=zerg.hydra, id=11bdce21-21df-40a5-346c-900df387425b, timestamp=1416992813994}]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>Generated by 
+<a href="http://www.gradle.org">Gradle 2.2</a> at Nov 26, 2014 11:06:54 AM</p>
+</div>
+</div>
+</body>
