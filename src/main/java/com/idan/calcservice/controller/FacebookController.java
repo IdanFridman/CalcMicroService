@@ -2,6 +2,7 @@ package com.idan.calcservice.controller;
 
 import com.idan.calcservice.facebook.NotificationService;
 import org.apache.log4j.Logger;
+import org.springframework.http.HttpStatus;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.PagedList;
 import org.springframework.social.facebook.api.Post;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
@@ -48,16 +50,13 @@ public class FacebookController {
     }
 
     @RequestMapping(value="/fbnotification" ,method= RequestMethod.GET)
-    public String sendNotification(Model model) {
+    @ResponseStatus(value = HttpStatus.OK)
+    public void sendNotification(Model model) {
         logger.info("fbnotification trigger");
-        if (!facebook.isAuthorized()) {
-            return "redirect:/connect/facebook";
-        }
+      //  if (!facebook.isAuthorized()) {
+       //     return "redirect:/connect/facebook";
+       // }
         notificationService.sendNotification("testing notification");
-        return null;
-
-
-
     }
 
 
