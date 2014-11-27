@@ -1,4 +1,4 @@
-package com.idan.calcservice;
+package com.idan.calcservice.kafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,23 +14,16 @@ import javax.inject.Named;
 @Named
 public class KafkaProducer {
 
-    @Autowired
-    @Qualifier("inputToKafka")
+    @Inject
     MessageChannel inputToKafka;
 
 
-
-    public void sendMessageToKafka(String message)
-    {
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void sendMessageToKafka(String message) {
         inputToKafka.send(
                 MessageBuilder.withPayload(message)
-                        .setHeader("messageKey", "3")
-                        .setHeader("topic", "zerg.hydra").build());
+                        .setHeader("messageKey", "1")
+                        .setHeader("topic", "test")
+                        .build());
 
     }
 

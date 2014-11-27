@@ -17,21 +17,48 @@
 
     <int-kafka:outbound-channel-adapter id="kafkaOutboundChannelAdapter"
                                         kafka-producer-context-ref="kafkaProducerContext"
-                                        auto-startup="true"
-                                        order="1"
+                                        auto-startup="false"
                                         channel="inputToKafka">
 
     </int-kafka:outbound-channel-adapter>
 
-
     <int-kafka:producer-context id="kafkaProducerContext">
         <int-kafka:producer-configurations>
             <int-kafka:producer-configuration broker-list="localhost:9092"
-                                              async="true"
-                                              topic="zerg.hydra"
+                                              key-class-type="kafka.serializer.StringEncoder"
+                                              value-class-type="kafka.serializer.StringEncoder"
+                                              topic="test"
                                               compression-codec="default"/>
         </int-kafka:producer-configurations>
     </int-kafka:producer-context>
+
+
+
+
+    <bean id="kafkaEncoder" class="org.springframework.integration.kafka.serializer.avro.AvroReflectDatumBackedKafkaEncoder">
+        <constructor-arg value="java.lang.String" />
+    </bean>
+
+
+    <bean id="producerProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="properties">
+            <props>
+                <prop key="request.required.acks">0</prop>
+                <prop key="request.timeout.ms">10000</prop>
+                <prop key="producer.type">sync</prop>
+                <prop key="compression.codec">none</prop>
+                <prop key="compressed.topics">""</prop>
+                <prop key="message.send.max.retries">3</prop>
+                <prop key="retry.backoff.ms">100</prop>
+                <prop key="topic.metadata.refresh.interval.ms">600000</prop>
+                <prop key="queue.buffering.max.ms">5000</prop>
+                <prop key="queue.buffering.max.messages">10000</prop>
+                <prop key="queue.enqueue.timeout.ms">-1</prop>
+                <prop key="batch.num.messages">200</prop>
+                <prop key="send.buffer.bytes">102400</prop>
+            </props>
+        </property>
+    </bean>
 
 
     <task:executor id="taskExecutor" pool-size="5" keep-alive="120" queue-capacity="500"/>

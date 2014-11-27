@@ -8,10 +8,10 @@
         </encoder>
     </appender>
 
-    <logger name="reactor" level="info"/>
     <logger name="org.projectreactor" level="info"/>
     <logger name="org.springframework" level="warn"/>
     <logger name="org.springframework.integration" level="DEBUG"/>
+    <logger name="org.springframework.integration.kafka" level="TRACE"/>
 
 
 

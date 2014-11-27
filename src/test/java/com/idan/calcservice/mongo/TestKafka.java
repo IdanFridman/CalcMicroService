@@ -1,7 +1,8 @@
 package com.idan.calcservice.mongo;
 
 import com.idan.calcservice.Application;
-import com.idan.calcservice.KafkaProducer;
+import com.idan.calcservice.kafka.KafkaProducer;
+import com.idan.calcservice.kafka.KafkaProducerJava;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.IntegrationTest;
@@ -23,6 +24,9 @@ public class TestKafka {
 
     @Inject
     KafkaProducer kafkaProducer;
+
+    @Inject
+    KafkaProducerJava kafkaProducerJava;
 
     @Test
     public void sendMessageToKafka()
