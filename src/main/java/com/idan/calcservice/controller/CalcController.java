@@ -20,7 +20,6 @@ public class CalcController {
     KafkaProducerJava kafkaProducerJava;
 
     @RequestMapping("/")
-
     public String index() {
         kafkaProducer.sendMessageToKafka("Si Test");
         kafkaProducerJava.sendMsgToKafka("JavaTest");
