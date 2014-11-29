@@ -4,6 +4,7 @@ import com.idan.calcservice.Application;
 import com.idan.calcservice.kafka.KafkaProducer;
 import com.idan.calcservice.kafka.KafkaProducerJava;
 import kafka.serializer.Encoder;
+import org.junit.AfterClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.IntegrationTest;
@@ -38,10 +39,15 @@ public class TestKafka {
     KafkaProducerJava kafkaProducerJava;
 
     @Test
-    public void sendMessageToKafka()
-    {
+    public void sendMessageToKafka() {
         kafkaProducer.sendMessageToKafka("Hello Kafka From SI");
 
+    }
+
+    @AfterClass
+    public static void afterClass() throws Exception {
+        // give the producer queues enough time to flush
+        Thread.sleep(2000);
     }
 
 
@@ -58,7 +64,7 @@ public class TestKafka {
         ProducerConfiguration<String, String> config = new ProducerConfiguration<String, String>(producerMetadata, producer.getObject());
         kafkaProducerContext.setProducerConfigurations(Collections.singletonMap("test", config));
         KafkaProducerMessageHandler<String, String> handler = new KafkaProducerMessageHandler<String, String>(kafkaProducerContext);
-        handler.handleMessage(MessageBuilder.withPayload("foo")
+        handler.handleMessage(MessageBuilder.withPayload("foo123")
                 .setHeader("messagekey", "3")
                 .setHeader("topic", "test")
                 .build());
